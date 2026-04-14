@@ -1,0 +1,3 @@
+ai-team/handoff/*
+!ai-team/handoff/.gitkeep
+!ai-team/handoff/session_context.md
