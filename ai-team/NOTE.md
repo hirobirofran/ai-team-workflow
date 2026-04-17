@@ -1,7 +1,7 @@
-# Claude Code 行動規範
+# AI チーム 行動規範（NOTE.md）
 
-このファイルを他リポジトリで使う場合、`NOTE.md` など任意の名前に変えてもよい。
-その場合はセッション開始時に「NOTE.md を読んでルールを把握して」と指示する。
+このファイルは `NOTE.md` という名前で他リポジトリに持ち込んで使う。
+セッション開始時に「NOTE.md を読んでルールを把握して」と指示する。
 
 ## 基本方針
 
@@ -20,7 +20,7 @@
 6. 作業ブランチを作成する（`git checkout -b feature/xxx` など）
 7. 作業内容・影響ファイル・手順・**工数見積もり**を整理してユーザーに提示する
 8. **「これで進めてよいですか？」と確認してから実装開始**
-9. 承認後、作業計画を `handoff/plan_YYYYMMDD.md` に保存する
+9. 承認後、作業計画を `handoff/issue-XX/YYYYMMDD_plan.md` に保存する
 
 ## 工数見積もりルール
 
@@ -49,13 +49,13 @@
 - 単一ファイルが大きい場合（目安: 500行超）は先に Gemini CLI でサマリを生成してから処理する
 
   ```bash
-  gemini -p "@./path/to/largefile 構造と要点をmarkdownで整理して" > handoff/summary_largefile.md
+  gemini -p "@./path/to/largefile 構造と要点をmarkdownで整理して" > handoff/misc/YYYYMMDD_summary_largefile.md
   ```
 
 - ディレクトリ丸ごと分析が必要な場合も同様
 
   ```bash
-  gemini -p "@./path/to/dir/ このディレクトリの全ファイルの構造と依存関係を整理して" > handoff/summary_dir.md
+  gemini -p "@./path/to/dir/ このディレクトリの全ファイルの構造と依存関係を整理して" > handoff/misc/YYYYMMDD_summary_dir.md
   ```
 
 ## サブエージェント使用ルール
@@ -66,10 +66,25 @@
 
 ## ハンドオフ管理
 
-- `handoff/` ディレクトリは **AI 間の連絡ファイル専用**（spec.md, task_spec.md, aar_*.md など）
-- **実装したソースコードは handoff/ に置かない**。通常のソースツリーの適切な場所に置く
-- セッション開始時の作業計画は必ず `handoff/plan_YYYYMMDD.md` に保存する
-- 実装完了後は必ず `handoff/aar_YYYYMMDD.md` に AAR を記録する（`templates/aar.md` 参照）
+`handoff/` ディレクトリは **AI 間の連絡ファイル専用**。実装したソースコードは置かない。
+
+### フォルダ構成
+
+```text
+handoff/
+  issue-XX/               ← 対応 Issue 番号でフォルダを切る
+    YYYYMMDD_research.md  ← リサーチ結果
+    YYYYMMDD_spec.md      ← 要件仕様書
+    YYYYMMDD_task_spec.md ← タスク仕様書
+    YYYYMMDD_plan.md      ← Claude Code 初期プラン（最重要：Copilot 引き継ぎにも使う）
+    YYYYMMDD_aar.md       ← After Action Review
+    YYYYMMDD_checkpoint.md ← コンテキスト引き継ぎ（コンテキスト溢れ時）
+```
+
+- ファイル名は必ず日付プレフィックス（`YYYYMMDD_`）をつける
+- Issue に紐づかない作業は `handoff/misc/` に置く
+- セッション開始時の作業計画は必ず `handoff/issue-XX/YYYYMMDD_plan.md` に保存する
+- 実装完了後は必ず `handoff/issue-XX/YYYYMMDD_aar.md` に AAR を記録する
 
 ## セーフティネット
 
