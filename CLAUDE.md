@@ -1,5 +1,7 @@
 # ai-team-workflow リポジトリ 行動規範
 
+See @ai-team/NOTE.md for detailed working rules.
+
 このリポジトリは「AI チームワークフロー」のテンプレートとナレッジを育てるためのリポジトリ。
 コードではなくドキュメントとプロンプトテンプレートが主な成果物。
 

@@ -57,6 +57,10 @@
 ## 推奨アプローチ（あれば）
 （断定ではなく、情報として）
 
+## 工数見積もり
+- リサーチフェーズ合計: 約Xh
+- PM フェーズへの引き継ぎ準備: 約Xh
+
 ## ⚠️ PM役への申し送り
 - （要件決定時に考慮すべきこと）
 - （確認が必要な前提）
@@ -72,12 +76,24 @@
 
 ---
 
-## NotebookLM との連携方法
+## リサーチツール選択ガイド
 
-NotebookLM で DeepResearch を使う場合:
+### NotebookLM（推奨：手元のドキュメントがある場合）
 
-1. NotebookLM に関連ドキュメント・仕様書・GitHub リポジトリを追加する
-2. DeepResearch で調査する
-3. 調査結果をこのテンプレートに貼り付けて Gemini に整理させる
-4. 出力した `research.md` を `handoff/` に保存する
-5. Gemini PM役（gemini_pm.md）に `research.md` を渡して要件整理を依頼する
+- PDF・テキストファイル・Google ドキュメント・URL などを「ソース」として追加
+- ※ GitHub リポジトリは直接追加不可。必要ならリポジトリの内容をテキストに変換して追加
+- ソースタイプとして「DeepResearch」を選択可能（Gemini の検索機能と統合）
+- 追加したドキュメントへの質問・深掘りが得意
+
+### DeepResearch（Gemini）（推奨：最新情報・広範な調査が必要な場合）
+
+- 最新の技術情報・ライブラリ動向の調査に強い
+- 結果が長くなりやすいため、出力後に Gemini に「要点を整理して」と依頼するのが効果的
+- 結果を NotebookLM に追加ソースとして投入する使い方も有効
+
+### 連携フロー
+
+1. （必要に応じて）NotebookLM にドキュメントを追加、DeepResearch で調査
+2. 調査結果をテキストで Gemini に貼り付けて整理させる（ファイル添付より直接貼付が確実）
+3. 出力した `research.md` を `handoff/issue-XX/YYYYMMDD_research.md` に保存
+4. Gemini PM役（gemini_pm.md）に `research.md` を渡して要件整理を依頼する
