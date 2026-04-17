@@ -1,3 +1,3 @@
-ai-team/handoff/*
-!ai-team/handoff/.gitkeep
-!ai-team/handoff/session_context.md
+# handoff/ はコミット対象（知見ログとして価値があるため）
+# 一時ファイルのみ除外
+ai-team/handoff/*.tmp
