@@ -68,6 +68,8 @@ ai-team/
     gemini_pm.md               ← Step 1: PM役
     gemini_design.md           ← Step 2: 設計役
     claude_code_session.md     ← Step 3: 実装セッション開始
+    pr_review.md               ← Step 3.5: PR レビュー（抜け漏れ・整合性チェック）
+    checkpoint.md              ← 随時: コンテキスト引き継ぎフォーマット
     aar.md                     ← Step 4: AAR フォーマット
   handoff/                     ← AI 間の成果物置き場（コミット対象）
     issue-XX/                  ← Issue 番号でフォルダを切る
@@ -149,6 +151,18 @@ ai-team/
 7. 承認後、Claude Code がプランを `handoff/issue-XX/YYYYMMDD_plan.md` に自動保存する
 
 > **ポイント**: プランファイルは Claude Code のレート上限時に Copilot への引き継ぎにも使う。
+
+---
+
+### Step 3.5: PR レビュー（オプション）
+
+実装完了後、PR 作成前後に実施する。Copilot PR レビューより複数ファイルの整合性確認が得意。
+
+```text
+templates/pr_review.md の ---ここから--- 以下を貼り付けて、PR番号を伝える
+```
+
+> **使い分け**: Copilot PR レビュー → コード品質・スタイル。Claude Code → タスク仕様との照合・抜け漏れ。
 
 ---
 

@@ -86,6 +86,12 @@ handoff/
 - セッション開始時の作業計画は必ず `handoff/issue-XX/YYYYMMDD_plan.md` に保存する
 - 実装完了後は必ず `handoff/issue-XX/YYYYMMDD_aar.md` に AAR を記録する
 
+### チェックポイント保存ルール
+
+- 作業時間が 2h を超えたら、タスクの区切りごとに checkpoint を保存する
+- コンテキストが溢れそうなときは即座に保存する（フォーマット: `templates/checkpoint.md`）
+- 保存の指示例：「今の状態を `handoff/issue-XX/YYYYMMDD_checkpoint.md` に保存して」
+
 ## セーフティネット
 
 指示と異なることをしようとしている場合は、実行前に報告する:
