@@ -84,16 +84,26 @@ ai-team/
 
 ## ステップ別手順
 
-### Step 0: リサーチ（NotebookLM / オプション）
+### Step 0: リサーチ（オプション）
 
-要件が複雑・技術的に不確かな場合に実施。
+要件が複雑・技術的に不確かな場合に実施。どちらのツールを使うかは状況次第。
 
-1. NotebookLM に関連ドキュメント・仕様書・GitHub リポジトリを追加する
-2. [templates/researcher.md](templates/researcher.md) を参考に DeepResearch で調査する
-3. 調査結果を `handoff/issue-XX/YYYYMMDD_research.md` として保存する
-4. Step 1 で Gemini PM役に渡す
+**ツール選択**:
 
-> **ポイント**: Gemini に直接添付しても読まないことがある。テキストで直接貼り付ける。
+| ツール | 向いているケース |
+| --- | --- |
+| **NotebookLM** | 手元に PDF・仕様書・URL がある。ソース追加時に「DeepResearch」オプションを選ぶと検索も統合できる |
+| **DeepResearch（Gemini）** | GitHub リポジトリを添付したい。最新の技術動向を広く調べたい |
+
+**手順**:
+
+1. 上記いずれかで調査する
+2. 結果が長い場合は Gemini に「要点を整理して」と依頼してから次へ
+3. 調査結果をテキストで貼り付けて [templates/researcher.md](templates/researcher.md) のフォーマットに整理する
+4. 出力を `handoff/issue-XX/YYYYMMDD_research.md` に保存する
+5. Step 1 で Gemini PM役に渡す
+
+> **ポイント**: Gemini にファイル添付しても読まないことがある。テキストで直接貼り付ける。
 
 ---
 
