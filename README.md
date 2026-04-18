@@ -11,8 +11,9 @@
 ai-team/          ← 他リポジトリで使うテンプレート一式
   NOTE.md         ← Claude Code 行動規範（コピーして使う）
   templates/      ← 役割別プロンプトテンプレート
-  handoff/        ← AI 間の成果物置き場（サンプル）
+  handoff/        ← 他リポジトリにコピーする handoff 構造の見本
 docs/             ← このリポジトリ自体の設計書・ナレッジ
+handoff/          ← このリポジトリ自身の作業ファイル（plan/aar/checkpoint）
 ```
 
 ## クイックスタート

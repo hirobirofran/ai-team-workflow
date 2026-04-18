@@ -1,27 +1,33 @@
 # ai-team-workflow リポジトリ 行動規範
 
-See @ai-team/NOTE.md for detailed working rules.
-
 このリポジトリは「AI チームワークフロー」のテンプレートとナレッジを育てるためのリポジトリ。
 コードではなくドキュメントとプロンプトテンプレートが主な成果物。
+
+> **注意**: `ai-team/NOTE.md` はこのリポジトリで使うものではなく、**他リポジトリに持ち込む**行動規範です。
+> このリポジトリ自体は以下のルールに従って運用します。
 
 ## このリポジトリの構造
 
 ```text
 docs/           ← ビジョン・プラン・ナレッジ（このリポジトリ自体の設計書）
 ai-team/        ← 他リポジトリで使うテンプレート一式
-  NOTE.md       ← 他リポジトリに持ち込む行動規範（チーム開発での摩擦を避けるため NOTE.md に統一）
+  NOTE.md       ← 他リポジトリに持ち込む行動規範（このリポジトリでは使わない）
   templates/    ← Gemini・Claude Code・AAR のプロンプトテンプレート
-  handoff/      ← AI 間の成果物置き場（コミット対象）
-    issue-XX/   ← Issue 番号でフォルダを分ける
+  handoff/      ← テンプレート用空ディレクトリ（他リポジトリへのコピー見本）
+handoff/        ← このリポジトリ自身の作業ファイル置き場
+  issue-XX/     ← Issue 番号でフォルダを分ける
+  misc/         ← Issue に紐づかない作業・サンプル
 ```
 
-## 作業時の基本ルール
+## 作業ルール
 
+- **作業前にブランチを切る**: `git checkout -b feature/xxx` （main への直接コミット禁止）
+- **コミット・プッシュ・PR は確認してから**: 内容を見せてからユーザーが承認後に実行
 - テンプレートを変更するときは `docs/knowledge.md` に変更理由と背景を記録する
 - 他リポジトリでの実用フィードバックは `docs/knowledge.md` に追記する
 - `docs/plan.md` の改善候補リストから着手するタスクを選ぶ
-- 作業完了後は AAR を `ai-team/handoff/issue-XX/YYYYMMDD_aar.md` に保存する
+- 作業完了後は AAR を `handoff/issue-XX/YYYYMMDD_aar.md` に保存する
+- セッション開始時のプランは `handoff/issue-XX/YYYYMMDD_plan.md` に保存する
 
 ## フィードバックループの回し方
 
@@ -34,23 +40,21 @@ ai-team/        ← 他リポジトリで使うテンプレート一式
   → 次の利用時に改善版を使う
 ```
 
-## NOTE.md について
+## NOTE.md の使い方（他リポジトリ向け）
 
-`ai-team/NOTE.md` を他リポジトリで使う際の指示方法:
+`ai-team/NOTE.md` を**他のリポジトリ**に持ち込んで使う。ファイル名は任意。
 
-```text
-「NOTE.md を読んでルールを把握して」
+```bash
+cp ai-team/NOTE.md /path/to/your-project/NOTE.md
 ```
 
-ルートに CLAUDE.md がある場合は以下を追記して参照させることもできる:
+コピー先のリポジトリの CLAUDE.md に参照を追記すると Claude Code がセッション開始時に自動で読む:
 
 ```text
-# ルート CLAUDE.md に追記
 See @ai-team/NOTE.md for detailed working rules.
 ```
 
-チーム開発では CLAUDE.md をルートに置くと全員に影響するため、
-NOTE.md という命名で摩擦を減らしている。
+チーム開発では CLAUDE.md をルートに置くと全員に影響するため、NOTE.md という命名で摩擦を減らしている。
 
 ## セッション開始時
 
