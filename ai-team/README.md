@@ -72,7 +72,15 @@ ai-team/
     consistency_check.md       ← 随時: ドキュメント整合性チェック（未記載・矛盾・乖離）
     checkpoint.md              ← 随時: コンテキスト引き継ぎフォーマット
     aar.md                     ← Step 4: AAR フォーマット
-  handoff/                     ← テンプレート用空ディレクトリ（他リポジトリへのコピー見本）
+  handoff/                     ← 他リポジトリにコピーして使う作業ファイル置き場（見本）
+    issue-XX/                  ← Issue 番号でフォルダを切る
+      YYYYMMDD_research.md
+      YYYYMMDD_spec.md
+      YYYYMMDD_task_spec.md
+      YYYYMMDD_plan.md         ← 最重要：Copilot 引き継ぎにも使う
+      YYYYMMDD_aar.md
+      YYYYMMDD_checkpoint.md   ← コンテキスト溢れ時の引き継ぎ
+    misc/                      ← Issue に紐づかない作業
 ```
 
 ---
