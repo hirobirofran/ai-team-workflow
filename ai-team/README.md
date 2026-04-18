@@ -68,18 +68,11 @@ ai-team/
     gemini_pm.md               ← Step 1: PM役
     gemini_design.md           ← Step 2: 設計役
     claude_code_session.md     ← Step 3: 実装セッション開始
-    pr_review.md               ← Step 3.5: PR レビュー（抜け漏れ・整合性チェック）
+    pr_review.md               ← Step 3.5: PR レビュー（タスク仕様との照合）
+    consistency_check.md       ← 随時: ドキュメント整合性チェック（未記載・矛盾・乖離）
     checkpoint.md              ← 随時: コンテキスト引き継ぎフォーマット
     aar.md                     ← Step 4: AAR フォーマット
-  handoff/                     ← AI 間の成果物置き場（コミット対象）
-    issue-XX/                  ← Issue 番号でフォルダを切る
-      YYYYMMDD_research.md
-      YYYYMMDD_spec.md
-      YYYYMMDD_task_spec.md
-      YYYYMMDD_plan.md         ← 最重要：Copilot 引き継ぎにも使う
-      YYYYMMDD_aar.md
-      YYYYMMDD_checkpoint.md   ← コンテキスト溢れ時の引き継ぎ
-    misc/                      ← Issue に紐づかない作業
+  handoff/                     ← テンプレート用空ディレクトリ（他リポジトリへのコピー見本）
 ```
 
 ---
