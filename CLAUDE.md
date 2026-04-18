@@ -23,6 +23,9 @@ handoff/        ← このリポジトリ自身の作業ファイル置き場
 
 - **作業前にブランチを切る**: `git checkout -b feature/xxx` （main への直接コミット禁止）
 - **コミット・プッシュ・PR は確認してから**: 内容を見せてからユーザーが承認後に実行
+- **PR 作成時はレビュー依頼を忘れずに**: `--reviewer hirobirofran`
+- **マージ後はブランチを削除する**: リモート・ローカル両方（`git push origin --delete <branch>` → `git branch -d <branch>`）
+- **変更後・PR 前に整合性チェックを実行**: `ai-team/templates/consistency_check.md` を使う
 - テンプレートを変更するときは `docs/knowledge.md` に変更理由と背景を記録する
 - 他リポジトリでの実用フィードバックは `docs/knowledge.md` に追記する
 - `docs/plan.md` の改善候補リストから着手するタスクを選ぶ
