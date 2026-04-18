@@ -51,10 +51,8 @@ cp ai-team/NOTE.md /path/to/your-project/NOTE.md
 コピー先のリポジトリの CLAUDE.md に参照を追記すると Claude Code がセッション開始時に自動で読む:
 
 ```text
-See @NOTE.md for detailed working rules.
+See @ai-team/NOTE.md for detailed working rules.
 ```
-
-（NOTE.md をコピー先のルートに置いた場合。`ai-team/NOTE.md` としてサブディレクトリに置く場合は `See @ai-team/NOTE.md`）
 
 チーム開発では CLAUDE.md をルートに置くと全員に影響するため、NOTE.md という命名で摩擦を減らしている。
 
