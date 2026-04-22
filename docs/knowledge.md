@@ -95,6 +95,12 @@ NotebookLM（リサーチ） → 仕様メモ → Gemini（PM役） → spec.md
    - Gemini はリポジトリ・コード添付を読まないことがある
    - Claude Code が生成するプロンプトでは「ここにこう書いてある」と具体的なファイル内容を混ぜ込む
 
+4. **一次情報で裏を取る**:
+   - DeepResearch や NotebookLM は偏った情報・古いブログ記事の孫引きに引きずられる
+   - GitHub リポジトリのアーカイブ状態・最終コミット日・Issue の活発度を必ず確認する
+   - 実例: Prisma の Python クライアント（prisma-client-py）は検索結果では推奨されるが、GitHub リポジトリではアーカイブ済み（開発終了）。DeepResearch だけでは気づけない
+   - Claude Code に「DeepResearch の結果を GitHub Issue でも裏付けとって」と依頼するのが有効
+
 ### handoff/ はコミットすべき
 
 gitignore すると知見が失われる。
