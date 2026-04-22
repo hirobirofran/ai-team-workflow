@@ -72,6 +72,10 @@
 - [ ] 実運用環境からの安全なフィードバック受け取り方法の検討（[#13](https://github.com/hirobirofran/ai-team-workflow/issues/13)）
   - PII・機密情報ガードレール設計を含む
   - Issue #13 に想定手順チェックリストあり（リサーチから開始推奨）
+- [ ] 壁打ちテンプレートの検討（[#14](https://github.com/hirobirofran/ai-team-workflow/issues/14)）
+  - 既存の [#3](https://github.com/hirobirofran/ai-team-workflow/issues/3)（相談・ブレスト・壁打ち取り込み）と関連
+  - リサーチ以前の状態で「やりたいことの言語化」を支援するテンプレート
+  - Issue #14 に想定手順チェックリストあり（リサーチから開始推奨）
 
 ## 既知の課題・ペインポイント
 
