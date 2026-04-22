@@ -38,6 +38,11 @@ NotebookLM（リサーチ）→ Web Gemini（PM・設計）→ Claude Code（実
                                                YYYYMMDD_aar.md
 ```
 
+> **⚠️ リサーチは最重要フェーズ**。手戻りしてでもここに戻る価値がある。
+> 精度を上げるコツ（Claude Code による下書きブラッシュアップ等）は
+> [ai-team/templates/researcher.md](ai-team/templates/researcher.md) と
+> [docs/knowledge.md](docs/knowledge.md) を参照。
+
 ## ドキュメント
 
 - [ビジョン](docs/vision.md) - 解決したい問題と目指す姿
