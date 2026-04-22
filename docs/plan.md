@@ -63,6 +63,20 @@
 - 他リポジトリへの展開とフィードバック収集の仕組み
 - A2A Protocol での AI 間連携（将来）
 
+## 次回セッションで整理するタスク
+
+- [ ] Claude.ai 版との壁打ち提案を整理・反映検討
+  - `handoff/misc/20260422_claude_ai_feedback.md`
+  - `handoff/misc/20260422_claude_ai_feedback_2.md`
+  - `handoff/misc/20260422_claude_ai_feedback_3.md`
+- [ ] 実運用環境からの安全なフィードバック受け取り方法の検討（[#13](https://github.com/hirobirofran/ai-team-workflow/issues/13)）
+  - PII・機密情報ガードレール設計を含む
+  - Issue #13 に想定手順チェックリストあり（リサーチから開始推奨）
+- [ ] 壁打ちテンプレートの検討（[#14](https://github.com/hirobirofran/ai-team-workflow/issues/14)）
+  - 既存の [#3](https://github.com/hirobirofran/ai-team-workflow/issues/3)（相談・ブレスト・壁打ち取り込み）と関連
+  - リサーチ以前の状態で「やりたいことの言語化」を支援するテンプレート
+  - Issue #14 に想定手順チェックリストあり（リサーチから開始推奨）
+
 ## 既知の課題・ペインポイント
 
 | 課題 | 深刻度 | 対応状況 |
