@@ -39,6 +39,8 @@ NotebookLM（リサーチ）→ Web Gemini（PM・設計）→ Claude Code（実
 ```
 
 > **⚠️ リサーチは最重要フェーズ**。手戻りしてでもここに戻る価値がある。
+> 実例：DeepResearch が推奨したライブラリが実は開発終了（アーカイブ済み）だったケースあり。
+> 一次情報（GitHub のアーカイブ状態・最終コミット日）で裏取りが効く。
 > 精度を上げるコツ（Claude Code による下書きブラッシュアップ等）は
 > [ai-team/templates/researcher.md](ai-team/templates/researcher.md) と
 > [docs/knowledge.md](docs/knowledge.md) を参照。

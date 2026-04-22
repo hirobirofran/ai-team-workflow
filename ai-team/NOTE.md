@@ -41,8 +41,36 @@
 - `git commit`（コミット内容を見せてから）
 - `git push` / PR 作成
 - ファイル・ディレクトリの削除
+  - `rm -rf`（特にワイルドカード含む場合）
 - 既存データの上書き
-- 外部サービスへのリクエスト
+- **インフラ操作**
+  - `terraform apply` / `terragrunt apply` / `terragrunt run-all apply`
+  - `cdk deploy`
+  - `kubectl apply` / `kubectl delete`
+  - `aws` CLI の書き込み系（`s3 rm`, `iam delete-*`, `ec2 terminate-instances` 等）
+  - `gcloud` / `az` CLI の書き込み系
+- **データベース直接操作**
+  - `DROP` / `TRUNCATE` / `DELETE without WHERE`
+  - マイグレーション未検証の `migrate`
+- 外部サービスへの書き込みリクエスト
+
+## 仕様制約・別 Issue 候補の発見時
+
+実装中に「別 Issue 化すべき」と判断した事項は、作業を止めず、
+以下のコマンドで下書き URL を生成して報告する:
+
+```bash
+gh issue create --title "..." --body "..." --web
+```
+
+`--web` オプションで Issue 作成画面がブラウザで開かれるのみで、実際には投稿されない。
+ユーザーは内容を確認して送信するだけでよい。
+Claude Code 側はコマンド実行後、URL と一行要約を報告して作業を継続する。
+
+**使い分け**:
+
+- 実装中に発見 → `gh issue create --web` で即下書き
+- セッション終了時にまとめて → AAR の「発見した仕様・制約」欄
 
 ## ファイルサイズルール
 
