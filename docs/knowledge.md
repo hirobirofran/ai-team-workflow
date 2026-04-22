@@ -154,7 +154,7 @@ AI がブランチを切らずに main 直接作業するリスクがある。
 2. Opus がプラン提示 → 「これなら Haiku / Sonnet で回せます」と振り分けを提案
 3. **Sonnet / Haiku** で実装
 4. 詰まったら Opus が **Gemini DeepResearch 用プロンプト** を生成
-5. DR 結果を Sonnet thinking-off で処理
+5. DR 結果を Sonnet Thinking オフ で処理
 6. 詰まったら Opus に戻す
 
 **役割分担の整理**:
