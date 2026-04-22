@@ -63,6 +63,12 @@
 - 他リポジトリへの展開とフィードバック収集の仕組み
 - A2A Protocol での AI 間連携（将来）
 
+## 次回セッションで整理するタスク
+
+- [ ] Claude.ai 版との壁打ち提案を整理・反映検討
+  - `handoff/misc/20260422_claude_ai_feedback.md`
+  - `handoff/misc/20260422_claude_ai_feedback_2.md`
+
 ## 既知の課題・ペインポイント
 
 | 課題 | 深刻度 | 対応状況 |
