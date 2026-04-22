@@ -119,7 +119,7 @@ NOTE.md に以下のルールを追記する。
 実装中に「別 Issue 化すべき」と判断した事項は、作業を止めず、
 以下のコマンドで下書き URL を生成して報告する:
 
-gh issue create --repo <owner>/<repo> --title "..." --body "..." --web
+gh issue create --title "..." --body "..." --web
 
 --web オプションで Issue 作成画面がブラウザで開かれるのみで、
 実際には投稿されない。ユーザーは内容を確認して送信するだけでよい。
