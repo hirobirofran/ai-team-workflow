@@ -23,7 +23,7 @@ ai-team-workflow リポジトリの [Issue #31](https://github.com/hirobirofran/
 
 ## 本タスクの性質
 
-**エピックタスク**: リポジトリ整合性チェック + CLAUDE.md レビューの結果から派生した 6 件のサブタスクをまとめて対応する。
+**エピックタスク**: リポジトリ整合性チェック + CLAUDE.md レビューの結果から派生した 4 件のサブタスクをまとめて対応する（B1/B2 は scope creep として #32 / #33 に切り出し済、本エピック対象外）。
 
 **重要な特性**:
 
@@ -34,37 +34,36 @@ ai-team-workflow リポジトリの [Issue #31](https://github.com/hirobirofran/
 
 ## 必読ファイル（全部読んでから着手）
 
-1. `CLAUDE.md`（既にロード済み）
+1. `CLAUDE.md`（Claude Code 起動時のみ自動ロード。Web AI で使う場合は別途貼付）
 2. **AAR**: [`handoff/misc/repo_check/20260425_aar.md`](../misc/repo_check/20260425_aar.md) ← 全体把握はここから
-3. **CLAUDE.md レビュー結果**: [`handoff/misc/repo_check/20260425_claude_md_review.md`](../misc/repo_check/20260425_claude_md_review.md) ← サブタスク 3 の詳細
-4. **整合性チェック結果**: [`handoff/misc/repo_check/20260425_consistency_check.md`](../misc/repo_check/20260425_consistency_check.md) ← サブタスク 1, 2, 4 の詳細
-5. **B 取り組み案メモ**: `handoff/followup.md` 「B（NOTE.md 拡張）の取り組み案メモ」 ← サブタスク 5, 6 の詳細
+3. **CLAUDE.md レビュー結果**: [`handoff/misc/repo_check/20260425_claude_md_review.md`](../misc/repo_check/20260425_claude_md_review.md) ← サブタスク 3 (C1) の詳細
+4. **整合性チェック結果**: [`handoff/misc/repo_check/20260425_consistency_check.md`](../misc/repo_check/20260425_consistency_check.md) ← サブタスク 1 (P0), 2 (P1), 4 (P2) の詳細
+5. **Superpowers 起票物レビュー**: [`handoff/issue-31/20260425_initial_prompt_review.md`](20260425_initial_prompt_review.md) ← B1/B2 切り出し経緯 + 修正反映ログ
 6. Issue #31 本文（チェックリスト確認）
 
 ## 取り組み順（エピック本文より）
 
 | # | サブタスク | 緊急度 | 順序 |
 |---|---|---|---|
-| 1 | (P0) `ai-team/templates/` 旧表記統一 + `consistency_check.md` 汚染修正 | **高** | **最初**（循環防止）|
+| 1 | (P0) `ai-team/templates/` 旧表記統一 + `consistency_check.md` 汚染修正 | **高** | **最初**（循環防止：テンプレ自身が壊れたまま他のチェックを走らせると循環するため）|
 | 2 | (P1) `handoff/followup.md` タイポ + `docs/plan.md` パス修正 | **高** | 並行可 |
-| 3 | CLAUDE.md レビュー反映（vision.md 参照 + commit/push 衝突解消 等） | 高 | 上 2 件後 |
+| 3 | (C1) CLAUDE.md レビュー反映（vision.md 参照 + commit/push 衝突解消 等） | 高 | 上 2 件後 |
 | 4 | (P2) `docs/knowledge.md` 旧表記 + `handoff/issue-19/` 処遇 + `handoff/misc/` サブ構造記載 | 中 | 余裕あれば |
-| 5 | (B1) NOTE.md 終了時手順テンプレ追加 | 中 | forcing function 待ち（他リポ FB 後）|
-| 6 | (B2) NOTE.md 運用改善サイクルテンプレ追加 | 中 | 同上 |
 
 **1 セッションで全部やる必要はない**。サイズ大きいので、1 件ずつ独立 PR / commit でも OK。
 
+AAR は **サブタスク単位 or セッション単位**で `handoff/issue-31/YYYYMMDD_aar.md` を残す（同日複数なら `_aar_p0.md` 等の suffix を付ける）。
+
 ## 重要な制約
 
-- **ユーザー指示「修正は分割実施」**: 1 セッションで全 6 件は重い。1〜2 件ごとに区切って AAR を残しながら進める
-- **`ai-team/` 配下は PR 必須**（サブタスク 1, 5, 6）。`docs/` `handoff/` は main 直 push 可
+- **ユーザー指示「修正は分割実施」**: 1 セッションで全 4 件は重め。1〜2 件ごとに区切って AAR を残しながら進める
+- **`ai-team/` 配下は PR 必須**（サブタスク 1 のみ）。`docs/` `handoff/` `library/` `CLAUDE.md`（root）は main 直 push 可
 - トークン圧迫の兆候があれば（残 40% 下回り）`handoff/issue-31/YYYYMMDD_checkpoint.md` にスナップショット保存して新セッションへ
 - 進捗は Issue #31 本文のチェックリストを `gh issue edit 31` でチェック更新
 
 ## 終了条件
 
-各サブタスクの完了 = Issue #31 のチェックリスト 6 件すべてチェック。
-ただし B1 / B2（forcing function 待ち）は対応保留でも Close 可（理由明記）。
+各サブタスクの完了 = Issue #31 のチェックリスト 4 件すべてチェック（B1/B2 は #32 / #33 に切り出し済のため本エピックの完了条件には含めない）。
 
 ## 開始手順
 
@@ -78,5 +77,4 @@ ai-team-workflow リポジトリの [Issue #31](https://github.com/hirobirofran/
 **質問例（参考）**:
 
 - 「P0 (#1) から着手しますが、`consistency_check.md` 汚染修正と `claude_code_session.md` / `aar.md` 旧表記統一を 1 PR にまとめますか? 別 PR にしますか?」
-- 「CLAUDE.md レビュー反映（#3）の Must 3 件は別 commit に分けますか? 1 commit でいいですか?」
-- 「B1 / B2（#5, #6）は本エピックでは保留して Close 時の判断にする、で OK ですか?」
+- 「C1 (#3) の Must 3 件は別 commit に分けますか? 1 commit でいいですか?」
