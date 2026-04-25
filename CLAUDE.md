@@ -27,6 +27,7 @@ library/        ← このリポジトリ固有の一次情報スナップショ
 - **`docs/` `handoff/` `library/` 配下は main への直接 push 可**（このリポジトリ固有の作業ファイルなので、軽量・低摩擦で進める）
 - **コミット・プッシュ・PR は確認してから**: 内容を見せてからユーザーが承認後に実行（PR 経由でなくても同じ）
 - **整理は append-only で溜めずに、編集時に consolidate**：knowledge.md / followup.md 等に追記するときは、同じトピックの既存エントリが3件以上あるなら原則抽出を検討する（autovacuum 相当）
+- **議論で合意した運用方針はその場で `handoff/followup.md` に書く**: コンテキストウィンドウ依存禁止。手動コンパクト・次セッション開始でも生き残る場所に永続化する（2026-04-25 反省より）
 - **マージ後はブランチを削除する**: リモート・ローカル両方（`git push origin --delete <branch>` → `git branch -d <branch>`）
 - **変更後・PR 前に整合性チェックを実行**: `ai-team/templates/consistency_check.md` を使う
 - テンプレートを変更するときは `docs/knowledge.md` に変更理由と背景を記録する
