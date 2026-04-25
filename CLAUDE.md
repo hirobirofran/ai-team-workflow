@@ -70,3 +70,16 @@ See @ai-team/NOTE.md for detailed working rules.
 1. `docs/plan.md` の改善候補リストを確認する
 2. `docs/knowledge.md` の未解決課題を把握する
 3. 今日やることを決めてから作業開始
+
+## セッション終了時の手順
+
+ユーザーから「今日はここまで」「終わる」等が来たら、以下を完了させてから閉じる。
+
+1. **このセッションで合意した運用方針・気づきは永続化**:
+   - 軽量メモ・次回候補: `handoff/followup.md`
+   - 長期ナレッジ・原則: `docs/knowledge.md`（同トピック 3 件以上で consolidate 検討）
+   - Issue 単位の振り返り: `handoff/issue-XX/YYYYMMDD_aar.md`
+   - memory（`~/.claude/projects/.../memory/`）の状態が古ければ更新
+2. **`git add` → `git commit` → `git push origin main`** を完了させる（push 漏れはコンテキストウィンドウ依存になるので絶対）
+3. 新規セッションへパスする作業がある場合、`handoff/issue-XX/YYYYMMDD_initial_prompt.md` が整備されているか確認
+4. 「お疲れさまでした」で閉じる。粘らない
