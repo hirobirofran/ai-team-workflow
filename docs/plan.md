@@ -71,9 +71,9 @@
 ## 次回セッションで整理するタスク
 
 - [x] Claude.ai 版との壁打ち提案を整理・反映検討
-  - `handoff/misc/20260422_claude_ai_feedback.md`
-  - `handoff/misc/20260422_claude_ai_feedback_2.md`
-  - `handoff/misc/20260423_claude_ai_feedback.md`
+  - `handoff/misc/feedback/20260422_claude_ai_feedback.md`
+  - `handoff/misc/feedback/20260422_claude_ai_feedback_2.md`
+  - `handoff/misc/feedback/20260423_claude_ai_feedback.md`
   - 整理結果：軽量反映は本 PR で対応。重量級は [#15](https://github.com/hirobirofran/ai-team-workflow/issues/15)・[#16](https://github.com/hirobirofran/ai-team-workflow/issues/16) として起票
 - [ ] 実運用環境からの安全なフィードバック受け取り方法の検討（[#13](https://github.com/hirobirofran/ai-team-workflow/issues/13)）
   - PII・機密情報ガードレール設計を含む
