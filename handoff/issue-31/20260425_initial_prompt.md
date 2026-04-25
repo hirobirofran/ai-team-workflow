@@ -2,10 +2,18 @@
 
 > **作成**: 2026-04-25
 > **対応 Issue**: [#31](https://github.com/hirobirofran/ai-team-workflow/issues/31) [Epic] リポジトリ整合性 + CLAUDE.md 強化（2026-04-25 AAR ベース）
-> **想定使用方法**:
->
-> - **Claude Code**: ユーザーが新セッションで「このファイルを読んで、不明点があれば聞いて、なければ理解内容と次のアクションを示して」と指示 → 本ファイルを直接 Read
-> - **Claude.ai Web / Gemini など**: 本ファイル全文をコピペして貼付
+
+## 起動コマンド（コピペで使える）
+
+### Claude Code 用（このファイルを Read させる）
+
+```text
+handoff/issue-31/20260425_initial_prompt.md を読んで、不明点があれば聞いて、なければ理解内容と次のアクションを示して
+```
+
+### Claude.ai Web / Gemini Web / NotebookLM など（ファイル参照不可な AI 用）
+
+本ファイル全文（この `## 起動コマンド` セクションを除く）をコピペで貼付してください。
 
 ---
 
