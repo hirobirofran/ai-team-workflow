@@ -23,7 +23,7 @@
 - **PR 運用の弊害に気づいた**：軽量なメモ・備忘も PR 必須にすると、コンテキストが溢れそうな場面で書き出す余裕を奪う。この followup.md 自体がその解決策。CLAUDE.md にも「このファイルだけは PR 不要で main 直接コミット可」のルール追記が必要（次回対応候補）。
 - **PR / Issue 本文への Claude Code 署名が不統一**：コミットメッセージの Co-Authored-By は自動付与されるが、PR/Issue 本文では私の能動的な記述依存で一貫していない。プロジェクトルールとして決めるべき（「Claude Code 担当として明示する」か「一人作業の体で通す」か）。
 - **`library/` はルート直下に置く（`ai-team/library/` ではない）**：`ai-team/` は他リポジトリへ持ち出すテンプレ専用で、リポジトリ固有情報を入れるとテンプレ汚染が起きる。`library/` はこのリポジトリ固有の「生物」情報スナップショット用のため、ルート直下が適切。Issue #28 の PoC 作業（[handoff/issue-28/](issue-28/)）で初版運用中。
-- **#28 PR 結果レポート申し送り（処理せずに残す項目）**：①【完了 2026-04-25】 [Issue #19](https://github.com/hirobirofran/ai-team-workflow/issues/19) 本文中の `ai-team/library/` 表記を `library/` に訂正（`gh issue edit 19` 実施済み、訂正注記追加）／② `ai-team/` テンプレ（NOTE.md / templates/）に「リポジトリ固有の `library/` をルートに置く」概念を組み込む別 Issue を新設（他リポジトリへ伝播させるため）。
+- **#28 PR 結果レポート申し送り（処理せずに残す項目）**：①【完了 2026-04-25】 [Issue #19](https://github.com/hirobirofran/ai-team-workflow/issues/19) 本文中の `ai-team/library/` 表記を `library/` に訂正（`gh issue edit 19` 実施済み、訂正注記追加）／②【完了 2026-04-25】 [Issue #30](https://github.com/hirobirofran/ai-team-workflow/issues/30) として起票（「library/ 概念をテンプレに組込む」よりも上位の「RSS フィード相当の最新情報ウォッチ機能が欲しい」として問題提起レベルで再フレーミング。HOW は議論と整理で詰める）。
 
 ## 2026-04-25（夜・Claude.ai 返信から）
 
