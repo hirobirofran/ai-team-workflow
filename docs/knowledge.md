@@ -523,6 +523,22 @@ Claude Code が以下のような挙動を自発的に取った:
 - ツール使用可否が深掘りモードのトリガーになっている仮説あり。同じ Opus でも Claude.ai Web では諦めモード（「それでいいと思いますよ」）になりやすい
 - Claude Code のように「調べる・試す」ができる環境でテンプレ効果が最大化される
 
+### 別セッション Opus によるプランレビューが効いた（実地観察 2026-04-25）
+
+[Issue #28](https://github.com/hirobirofran/ai-team-workflow/issues/28)（Gemini CLI で DeepResearch ができるか調査 + library/ 運用 PoC）で、新規セッション Opus がプランを提示する前に、別セッション Opus（前セッション）がそのプランをレビューする運用を実演（[`handoff/issue-28/20260425_plan_review.md`](../handoff/issue-28/20260425_plan_review.md)）。
+
+**有効だった指摘**（[Issue #28 AAR](../handoff/issue-28/20260425_aar.md) より）:
+
+- **M1（checkpoint 閾値定量化）**: 「コンテキスト残 40% で checkpoint 化」という具体閾値を入れたことで、実行 AI 側が手を動かしながら自分で判定できた
+- **M3（既存スタイル踏襲を Step 化）**: README/CLAUDE.md の構造図を編集前に Read する step を入れたことで、追記行が浮かなかった
+- **O1（library/ の性質明示）**: 「信頼性の最終防衛線」と性質づけたことで、エントリ執筆時に「曖昧な要約は載せない」「一次情報 URL を必ず付ける」という具体規律として機能
+
+**示唆**:
+
+- [Issue #25](https://github.com/hirobirofran/ai-team-workflow/issues/25)（別 AI / 別セッションによるプランレビュー）の自動化設計では「**人間補助型**」（プランファイル + 別セッション独立コンテキスト評価）が高品質
+- 完全自動化（同セッション内サブエージェントレビュー）はコンテキスト独立性が落ちる懸念あり
+- レビュー指摘の **トレース可能化**（plan_review.md 末尾に `→ 反映済み（plan.md SectionX.Y）` を追記）は、後続セッションでも経緯が辿れる。Issue #25 設計のテンプレ要素にすべき
+
 ---
 
 ## 未解決の課題
