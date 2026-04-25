@@ -320,3 +320,13 @@ forcing function 待ちで保留中のサブ:
 - [#33](https://github.com/hirobirofran/ai-team-workflow/issues/33) B2（NOTE.md 運用改善サイクルテンプレ）
 
 両者とも他リポでの NOTE.md 実適用 FB を得てから着手（[`handoff/issue-32/20260425_initial_prompt.md`](issue-32/20260425_initial_prompt.md) / [`handoff/issue-33/20260425_initial_prompt.md`](issue-33/20260425_initial_prompt.md) で起動条件チェックする stub）。
+
+## 2026-04-26
+
+### 多層プラン（意図サマリー先行）の PoC（[Issue #37](https://github.com/hirobirofran/ai-team-workflow/issues/37)）
+
+- **観察**: 実装系セッションで最初から手順詳細プランを出すと、前提ずれによる全手戻りが体感で頻発。Claude のプランが長すぎてユーザーがチェックしきれず「やってみて」「あっ」のループに陥る
+- **仮説**: プランを多層化（**L1 意図サマリー 3〜5 行 → L2 概要設計／方針案 → L3 手順詳細**）して、L1 で前提一致を取ってから進めば早期検出できる。小タスクは「L1 だけで十分」と Claude が判断して止める運用も併存
+- **PoC**: 本リポの実作業で Claude が L1→L2→L3 を自動運用。1〜2 サイクル経験してから [ai-team/templates/](../ai-team/templates/) 反映を判断
+- **兄弟仮説**: 「実装側にもオーケストレーター」案（規模が大きいときはサブイシュー分け設計を別セッションに切り出す）── 多層プランで吸収できなければ別 Issue 化
+- **memory 反映済み**: `feedback_layered_plan_intent_first.md`（Claude 自身の動き方を変える指示として登録、PoC 期間中は強めに適用）
